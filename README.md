@@ -102,7 +102,7 @@ Define once, automatically rendered on all specified floors:
 ```json
 {
   "type": "elevator",
-  "name": "Hidden Lift", 
+  "name": "service elevator", 
   "vertices": [[10, 5.5], [12, 5.5], [12, 7.5], [10, 7.5]],
   "floors": [-1, 0, 1, 2],
   "hidden": true,
@@ -147,7 +147,7 @@ The tool generates SVG with:
 Running the tool prints a detailed summary:
 
 ```
-Building: Karadjov Manor
+Building: Manor
 ==================================================
 
 Level 0: Ground Floor (18th c. + 19th c.)
@@ -217,18 +217,3 @@ This allows you to set a consistent font across the building while overriding sp
 
 7. **Label positioning**: Use `offset_x` and `offset_y` to nudge labels away from walls or into better positions for odd-shaped rooms.
 
-## Legacy Support
-
-The old `secret_shaft` format still works:
-
-```json
-{
-  "secret_shaft": {
-    "x": 10.5, "y": 5.5,
-    "width": 2.0, "depth": 2.0,
-    "label": "Secret Shaft"
-  }
-}
-```
-
-This is automatically converted to a hidden elevator spanning all floors.
